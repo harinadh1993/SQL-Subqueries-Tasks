@@ -1,5 +1,4 @@
 --Write a query on Customer wise on maximum total price by getting all order details
-
 SELECT O_CUSTKEY,O_TOTALPRICE FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS WHERE O_TOTALPRICE IN (SELECT MAX(O_TOTALPRICE) FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS GROUP BY O_CUSTKEY) ORDER BY O_TOTALPRICE DESC;
 
 --Writa a query to identify Maximum order(Total Amount) to fetch all order details
